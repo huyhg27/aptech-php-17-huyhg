@@ -1,0 +1,31 @@
+
+.cv-text{
+    line-height: 3;
+}
+.cv-info ul{
+    list-style: none;
+    padding-left: 0;
+    line-height: 3;
+}
+.cv-info ul li span{
+    display: inline-block;
+    min-width:140px;
+}
+img{
+    width: 80%;
+    height:auto;
+    
+}
+.section-title{
+    
+}
+.edu-list{
+    list-style: none;
+}
+.edu-list h2{
+    margin-bottom:15px;
+}
+footer p{
+    color:white;
+    line-height: 100%;
+}

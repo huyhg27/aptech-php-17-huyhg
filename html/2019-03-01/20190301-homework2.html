@@ -2,9 +2,7 @@
 <html>
     <head>
         <style>
-            div{
-                border: 0.5px dashed red;
-            }
+            
             p{
                 font-size:30px;
                 text-align: center;
@@ -13,10 +11,12 @@
                 height:auto;
                 display:flex;
                 justify-content: center;
+                margin-bottom:10px;
             }
             .header-left{
                 width:20%;
                 background-color: bisque;
+                margin-right:10px;
             }
             .header-right{
                 width:80%;
@@ -34,15 +34,29 @@
                 background-color: green;
                 
             }
+            .btn a{
+                margin-right:10px;
+
+            }
             .content-wrapper{
                 height:300px;
                 display:flex;
                 justify-content: center;
+                margin:10px 0;
             }
             .content{
                 background-color:salmon;
                 width:50%;
+                
             }
+            .left{
+                margin-right:10px;
+            }
+            .content-right{
+                background-color:salmon;
+                width:50%;
+            }
+            
             footer{
                 width:100%;
                 height:auto;
@@ -52,6 +66,7 @@
             .footer-left{
                 width:70%;
                 background-color: cornflowerblue;
+                margin-right:10px;
             }
             .footer-right{
                 width:30%;
@@ -84,10 +99,10 @@
             </div>
         </div>
         <div class="content-wrapper">
-            <div class="content">
+            <div class="content left">
                 <p>content: 50%</p>
             </div>
-            <div class="content">
+            <div class="content-right">
                 <p>content: 50%</p>
             </div>
         </div>
