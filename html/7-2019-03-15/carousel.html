@@ -1,0 +1,198 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>carousel</title>
+    <style>
+        .header{
+            height:70px;
+        }
+        .Slide{
+          background-size: cover;
+         
+          background-repeat: no-repeat;
+        }
+        .Slide-1{
+          background-image: url('https://pbs.twimg.com/media/Dn2fufFUYAAkaq0.jpg');
+          background-position: center;
+        }
+        .Slide-2{
+          background-image: url("https://farm8.staticflickr.com/7825/46677263074_e0d09fc222_h.jpg");
+          background-position:top;
+        }
+        .Slide-3{
+          background-image: url("https://66.media.tumblr.com/7161b25f43c815ae731bcd8696f9f9c0/tumblr_pnqoyjpJAc1v7y9xxo5_1280.png");
+          background-position: top;
+        }
+        .Image{
+          background-image: url('https://pbs.twimg.com/media/Dn2fufFUYAAkaq0.jpg');
+          background-size: cover;
+          width:100px;
+          height:100px;
+          background-position: center right;
+        }
+        .lgImage{
+          height:350px;
+          width:350px;
+        }
+        .Image-1{
+          background-image:url("https://farm4.staticflickr.com/3692/19844618980_5e86f53249_k.jpg");
+          background-size: cover;
+        }
+        .Image-2{
+          background-image: url("https://pbs.twimg.com/media/DvRO9iqVYAAbrYd.jpg");
+          background-size: cover;
+        }
+    </style>
+</head>
+<body class="h-100">
+
+    <div class="container-fluid header"><!--nav bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="#">Carousel</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#hiddenNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="#hiddenNavbar">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#">Home </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                      </li>
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-2"  type="search" placeholder="Search">
+                      <button class="btn btn-outline-success my-2 " type="submit">Search</button>
+                    </form>
+                  </div>
+        </nav>
+        
+    </div>
+
+    <div class="containe-fluid" >
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="Slide Slide-1 h-75"></div>
+                <div class="carousel-caption text-left d-none d-md-block">
+                    <h2 class="">菅原茉椰</h5>
+                    <p>宮城E嫁</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="Slide Slide-2 h-75"></div>
+                  <div class="carousel-caption text-left d-none d-md-block">
+                      <h2 class="">菅原茉椰</h5>
+                      <p>宮城E嫁</p>
+                    </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="Slide Slide-3 h-75"></div>
+                  <div class="carousel-caption text-left d-none d-md-block">
+                    </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="row mb-5">
+            <div class="col-4 d-flex flex-column align-items-center">
+                <div class="Image rounded-circle"></div>
+                <p class="h2">Heading</p>
+                 <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+                    </p>
+                    <button class="btn btn-danger">View detail</button>
+            </div>
+            <div class="col-4 d-flex flex-column align-items-center">
+                <div class="Image rounded-circle"></div>
+                    <p class="h2">Heading</p>
+                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+                        </p>
+                        <button class="btn btn-danger">View detail</button>
+                </div>
+                <div class="col-4 d-flex flex-column align-items-center">
+                    <div class="Image rounded-circle"></div>
+                        <p class="h2">Heading</p>
+                         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+                            </p>
+                            <button class="btn btn-danger">View detail</button>
+                    </div>
+
+        </div>
+        <hr class="my-5">
+    </div>
+
+    <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8">
+            <p class="h1">First featurette heading. It’ll blow your mind.
+            </p>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+            </p>
+          </div>
+          <div class="col-12 col-md-4" >  
+            <div class="lgImage Image-1"></div>
+          </div>
+        </div>
+        <hr class="my-5">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4" >
+                <div class="lgImage Image-2"></div>
+              </div>
+              <div class="col-12 col-md-8">
+                  <p class="h1">Oh yeah, it’s that good. See for yourself.</p>
+                  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+                  </p>
+                </div>
+              
+            </div>
+            <hr class="my-5">
+          
+    </div>
+
+    <footer class="container mb-5">
+      <div class="row d-flex justify-content-between">
+        <div class="col-4 d-flex">
+            <p >© 2017-2019 Company, Inc.</p>
+            <ul class="list-inline ml-2">
+              <li class="list-inline-item"><a href="">Privacy</a></li>
+              <li class="list-inline-item"><a href="">Terms</a></li>
+            </ul>
+        </div>
+        <div class="col-2 text-right">
+          <a href="#">back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
