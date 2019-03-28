@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+
+        </tbody>
+    </table>
+
+    <p id="demo"></p>
+    
+    <script>
+        var tb = document.getElementById('table-body');
+        function loadUser(){
+            var http = new XMLHttpRequest();
+            http.onreadystatechange = function(){
+                if(http.readyState === 4){
+                    var dt = JSON.parse(http.responseText);
+                    
+                   console.log(dt);
+                    console.log(dt.users);
+                    console.log(dt.users[0].id);
+                    // 
+                    //
+                    // 
+                    for(var i=0; i < dt.users.length; i++){
+                       // var dtArr = Object.keys(dt.users[i]); <- users la key cura object dt va cung la array nen ko phair
+                      
+                        var tr = document.createElement('tr'); 
+                        var th = document.createElement('th');
+                        var thText = document.createTextNode(i+1);
+                        th.appendChild(thText);
+                        tr.appendChild(th);
+
+                        var td = document.createElement('td');
+                        var tdText = document.createTextNode(dt.users[i].name);
+                        td.appendChild(tdText);
+                        tr.appendChild(td);
+
+                        var td = document.createElement('td');
+                        var tdText = document.createTextNode(dt.users[i].email);
+                        td.appendChild(tdText);
+                        tr.appendChild(td);
+                       
+                        
+                        tb.appendChild(tr);
+                        
+                    }
+                   
+                }
+            }
+            http.open("GET","./users.json",false);
+            http.send();
+        }
+        
+        loadUser();
+        
+    </script>
+</body>
+
+</html>

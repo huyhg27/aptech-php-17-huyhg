@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Document</title>
+    <style>
+        .cardImage{
+                 background-position: center;
+                 background-repeat: no-repeat;
+                 background-size: cover;
+                 
+            }
+    </style>
+</head>
+<body>
+    <button id="btn">GET</button>
+    <div id="post-container"class="container">
+         
+
+     </div><!--end card post-->
+        
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function (){
+                $.get('posts.json',function(data,status){
+                    if(status === 'success'){
+                        console.log(data.length);
+                        for(var i=0; i < data.length; i++){
+                            var cardDiv = '<div class="card my-3" id="card-post-'+(i+1)+'"></div>';
+                            var rowDiv = '<div class="row" id="row-post-'+(i+1)+'"></div>';
+                            var cardBody = '<div class="col-7 ml-5 mr-4 card-body" id="cardbd-'+(i+1)+'"></div>';
+
+                            if(typeof data[i].categories[0] === 'undefined'){
+                                var cat = '<h6>Category: Other</h6>';
+                            }else{
+                                var cat = '<h6>Category: '+data[i].categories[0].name+'</h6>';
+                            }
+                            var title= '<h4>'+data[i].title+'</h4>';
+                            var postDate='<p class="text-muted">'+data[i].created_at+'</p>';
+                            var descript='<p class="card-text">'+data[i].description+'</p>';
+                            var postLink='<a href="#">Continue reading</a>';
+                            
+                            $('#post-container').append(cardDiv)
+                            $('#card-post-'+(i+1)).append(rowDiv);
+                            $('#row-post-'+(i+1)).append(cardBody);
+                            $('#cardbd-'+(i+1)).append(cat);
+                            $('#cardbd-'+(i+1)).append(title);
+                            $('#cardbd-'+(i+1)).append(postDate);
+                            $('#cardbd-'+(i+1)).append(descript);
+                            $('#cardbd-'+(i+1)).append(postLink)
+
+                            var cardImg = '<div class="col-4 my-1 cardImage" id="card-img-'+(i+1)+'"></div>';
+                            $('#row-post-'+(i+1)).append(cardImg);
+                            $('#card-img-'+(i+1)).css('background-image', 'url(' + data[i].image_url + ')');
+                            
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
