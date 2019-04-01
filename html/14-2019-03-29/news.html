@@ -1,0 +1,342 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <style>
+      body{
+        height: 100vh;
+      }
+      a{
+        text-decoration-style: none;
+        color: black;
+      }
+      .img-text{
+        position: absolute;
+        top: 230px;
+      }
+      #card-bg, #card-bg-2{
+        background-image: url("DvRO9iqVYAAbrYd.jpg");
+        background-position: center;
+      }
+
+      #cardImg{
+        background-image: url("https://farm8.staticflickr.com/7913/47400580521_3e511199a5_b.jpg");
+        background-position: center;
+        }
+      
+      #collapseExample ul li{
+        line-height: 2.5rem;
+      }
+      
+      @media(max-width:991px){
+        .show-lg{
+        display:none;
+      }
+        #card-bg-2{
+          display:none;
+        }
+        #collapseExample{
+        display:none
+        }
+
+        #collapseExample ul li{
+        line-height: 2.5rem;
+      }
+
+        .hide-col{
+          display:none;
+        }
+        .card-h-100{
+          height:100%!important;
+        }
+      }
+      
+      @media(min-width:992px){
+        .show-lg{
+          display: block;
+        }
+        #collapseExample ul{
+          display:flex;
+          justify-content:space-between;
+        }
+        #collapseExample ul li{
+          display:inline;
+      }
+        #card-bg-2{
+          display:block;
+        }
+       
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
+                    <button class="btn btn-outline-danger show-lg">SIGN UP NOW</button>
+                    <a class="text-success h1" href="#">NEWS</a>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="show-lg fas fa-search mr-1"></span>
+                      <button class="show-lg btn btn-outline-success">SIGN IN</button>
+                    </div>
+                    <button id="hamburger" class="navbar-toggler" type="button">
+                      <span class="navbar-toggler-icon "></span>
+                    </button>
+            </nav>
+            <div class="row">
+              <div id="collapseExample" class="w-100">
+                      <ul class="list-unstyled text-muted pl-3">
+                        <li>Home</li>
+                        <li>HTML</li>
+                        <li>Css</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>Css</li>
+                        <li>JavaScript</li>
+                      </ul>
+                 </div>
+              </div>
+            
+    </div>
+    <div class="container">
+        <hr>
+      <div class="row h-75">
+        <div id="card-bg" class="col-6 col-lg-4 text-white border-white">
+          <p class="img-text h4 position-relative ">Card title</p>
+          <p class="img-text position-relative">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          </p>
+        </div>
+        <div id="card-bg-2" class="col-lg-4 text-white">
+            <p class="img-text h4 position-relative ">Card title</p>
+            <p class="img-text position-relative">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </p>
+        </div>
+        
+        <div class="col-6 col-lg-4">
+            <ul class="list-group ">
+                <li class="list-group-item bg-light">Cras justo odio</li>
+                <div class="list-group-item d-flex justify-content-between align-items-baseline"><a href="#" class="text-truncate">Lorem ipsum dolorolorolor.</a><span class="fab fa-html5"></span></div>
+                <div class="list-group-item d-flex justify-content-between align-items-baseline"><a href="#" class="text-truncate">Morbi leo risusMorbi leo risus</a><i class="fab fa-js-square"></i></div>
+                <div class="list-group-item d-flex justify-content-between align-items-baseline"><a href="#" class="text-truncate">Lorem Porta ac consectetur ac</a><span class="fab fa-html5"></span></div>
+                <div class="list-group-item d-flex justify-content-between align-items-baseline"><a href="#" class="text-truncate">Lorem Vestibulum at eros</a><span class="fab fa-html5"></span></div>
+                <div class="list-group-item d-flex justify-content-between align-items-baseline"><a href="#" class="text-truncate">Lorem Vestibulum at eros</a><span class="fab fa-html5"></span></div>
+                <div class="list-group-item d-flex justify-content-between align-items-baseline"><a href="#" class="text-truncate">Lorem Vestibulum at eros</a><span class="fab fa-html5"></span></div>
+                <div class="list-group-item d-flex justify-content-between align-items-baseline"><a href="#" class="text-truncate">Lorem Vestibulum at eros</a><span class="fab fa-html5"></span></div>
+                
+              </ul>
+        </div>
+      </div>
+    </div><!--end top content-->
+
+    <div class="container my-3">
+      <hr>
+     <div class="d-flex justify-content-between my-2">
+        <span class="badge badge-danger h5">Danger</span>
+       <div><a class="text-muted"href="#">MORE &gt;</a></div>
+     </div>
+
+      <div class="row">
+        
+          <div class="col-6 col-lg-8">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                  <div  class="card h-50 card-h-100">
+                      <div id="cardImg" class="h-100"></div>
+                      <div class="card-body">
+                        <p class="h4 card-title">Card Title</p>
+                        <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                       
+                      </div>
+                      <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                    </div>
+        
+              </div>
+
+              <div class="col-lg-6 hide-col">
+                  <div class="card h-50">
+                      <div id="cardImg" class="h-100"></div>
+                      <div class="card-body">
+                        <p class="h4 card-title">Card Title</p>
+                        <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                       
+                      </div>
+                      <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                    </div>
+        
+              </div>
+
+              <div class="col-lg-6 hide-col">
+                  <div class="card h-50">
+                      <div id="cardImg" class="h-100"></div>
+                      <div class="card-body">
+                        <p class="h4 card-title">Card Title</p>
+                        <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                       
+                      </div>
+                      <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                    </div>
+        
+              </div>
+
+              <div class="col-lg-6 hide-col">
+                  <div class="card h-50">
+                      <div id="cardImg" class="h-100"></div>
+                      <div class="card-body">
+                        <p class="h4 card-title">Card Title</p>
+                        <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                       
+                      </div>
+                      <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                    </div>
+        
+              </div>
+
+            </div>
+
+            
+          </div>
+
+          <div class="col-6 col-lg-4">
+              <div class="card h-100">
+                <div id="cardImg" class="h-100"></div>
+                <div class="card-body">
+                  <p class="h4 card-title">Card Title</p>
+                  <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                </div>
+                <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+              </div>
+            </div>
+
+    </div>
+
+    
+    </div>
+
+    <div class="container my-5">
+        <hr>
+       <div class="d-flex justify-content-between my-2">
+          <span class="badge badge-warning h5">Warning</span>
+         <div><a class="text-muted"href="#">MORE &gt;</a></div>
+       </div>
+
+        <div class="row h-100">
+          <!--right block-->
+            <div class="col-6 col-lg-4">
+                <div class="card h-100">
+                    <div id="cardImg" class="h-100"></div>
+                    <div class="card-body">
+                      <p class="h4 card-title">Card Title</p>
+                      <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                    </div>
+                    <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                </div> 
+            </div>
+            <!--left block-->
+            <div class="col-6 col-lg-8">
+                <div class="row h-100">
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-50 card-h-100">
+                            <div id="cardImg" class="h-100"></div>
+                            <div class="card-body">
+                              <p class="h4 card-title">Card Title</p>
+                              <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                             
+                            </div>
+                            <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                        </div>
+                          
+                    </div>
+                    <div class="col-lg-6 hide-col">
+                        <div class="card h-50">
+                            <div id="cardImg" class="h-100"></div>
+                            <div class="card-body">
+                              <p class="h4 card-title">Card Title</p>
+                              <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                             
+                            </div>
+                            <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                        </div>
+                          
+                    </div>
+                    <div class="col-lg-6 hide-col">
+                        <div class="card h-50">
+                            <div id="cardImg" class="h-100"></div>
+                            <div class="card-body">
+                              <p class="h4 card-title">Card Title</p>
+                              <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                             
+                            </div>
+                            <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                        </div>
+                          
+                    </div>
+                    <div class="col-lg-6 hide-col">
+                        <div class="card h-50">
+                            <div id="cardImg" class="h-100"></div>
+                            <div class="card-body">
+                              <p class="h4 card-title">Card Title</p>
+                              <p class="text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed culpa odit impedit enim porro incidunt beatae magnam quam illum?</p>
+                             
+                            </div>
+                            <div class="card-footer"><small class="text-muted">Last updated 3 mins ago</small></div>
+                        </div>
+                          
+                    </div>
+                  </div>
+                
+            </div><!--end left block-->
+              
+      </div>
+  
+      
+      </div>
+
+      <div class="container-fluid my-5">
+          <hr>
+         <div class="row d-flex align-content-between">
+          <div class="col-5 offset-1">
+              <p class="h4">HỆ THỐNG ĐÀO TẠO CNTT QUỐC TẾ SOFTTECH</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>hoanggiahuy275@gmail.com</p>
+
+          </div>
+          <div class="col-2 offset-1 d-none d-md-block">
+              <ul class="list-unstyled">
+                      <li class="text-dark"><b>NAVIGATION</b></li>
+                      <li><a href="#">HOME</a></li>
+                      <li><a href="#">HTML</a></li>
+                      <li ><a href="#">CSS</a></li>
+                      <li><a href="#">Javascript</a></li>
+                      <li><a href="#">PHP</a></li>
+                      <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="col-2 offset-1">
+                  <ul class="list-unstyled">
+                          <li class="text-dark"><b>About</b></li>
+                          <li><a href="#">HOME</a></li>
+                          <li><a href="#">HTML</a></li>
+                          <li ><a href="#">CSS</a></li>
+                          <li><a href="#">Javascript</a></li>
+                  </ul>
+          </div>
+         </div>
+      </div>
+
+<script src="jquery-3.3.1.js">
+</script>
+<script>
+   $('#hamburger').click(function(){
+       $('#collapseExample').slideToggle("slow");
+    })
+    
+</script>
+</body>
+</html>
